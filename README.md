@@ -53,12 +53,7 @@
         <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
     </footer>
 
-    <!-- Chatbot Carluis IA -->
-    <iframe 
-        src="https://melodious-alpaca-431d08.netlify.app" 
-        style="position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; border: none; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 9999; background: white;"
-        title="Asistente IA Carluis">
-    </iframe>
+  <script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
 
     <script>
         let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
