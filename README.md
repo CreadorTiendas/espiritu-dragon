@@ -53,7 +53,8 @@
         <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
     </footer>
 
-  <script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
+    <!-- Tidio Chat (Lyro AI) - Funciona 100% -->
+    <script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
 
     <script>
         let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
