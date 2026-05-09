@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Espíritu del Dragón - Sanación Ancestral con IA</title>
+    <title>Espíritu del Dragón - Sanación Ancestral</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfaf6; color: #2a2a2a; line-height: 1.6; }
@@ -53,17 +53,12 @@
         <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
     </footer>
 
-    <div id="chat-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-family: sans-serif;">
-        <div id="chat-toggle" style="background: #b8860b; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 12px; text-align: center; flex-direction: column;">💬<br>Chat</div>
-        <div id="chat-window" style="display: none; position: absolute; bottom: 80px; right: 0; width: 320px; background: white; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); overflow: hidden;">
-            <div style="background: #4a2c2c; color: #e6c8a0; padding: 12px; text-align: center; font-weight: bold;">🐉 Asistente Dragón</div>
-            <div id="chat-messages" style="height: 350px; overflow-y: auto; padding: 12px; background: #f9f9f9; font-size: 14px; color: black;"></div>
-            <div style="padding: 12px; display: flex; gap: 8px; background: white;">
-                <input type="text" id="chat-input" placeholder="Ej: ¿Qué incluye la moxibustión?" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 30px;">
-                <button id="chat-send" style="background: #b8860b; color: white; border: none; padding: 8px 16px; border-radius: 30px;">Enviar</button>
-            </div>
-        </div>
-    </div>
+    <!-- Chatbot Carluis IA (el que sí funciona) -->
+    <iframe 
+        src="https://melodious-alpaca-431d08.netlify.app" 
+        style="position: fixed; bottom: 20px; right: 20px; width: 380px; height: 550px; border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 9999; background: white;"
+        title="Asistente IA Carluis">
+    </iframe>
 
     <script>
         let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
@@ -73,43 +68,9 @@
         document.getElementById('visitas').innerText = visitas;
         document.getElementById('consultas').innerText = consultas;
         document.getElementById('cotizaciones').innerText = cotizaciones;
+        
         function registrarConsulta() { consultas++; localStorage.setItem('consultas_dragon', consultas); document.getElementById('consultas').innerText = consultas; }
         window.registrarCotizacion = function(pack) { cotizaciones++; localStorage.setItem('cotizaciones_dragon', cotizaciones); document.getElementById('cotizaciones').innerText = cotizaciones; window.open(`https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20${pack}`, '_blank'); };
-        const toggle = document.getElementById('chat-toggle');
-        const windowChat = document.getElementById('chat-window');
-        const input = document.getElementById('chat-input');
-        const send = document.getElementById('chat-send');
-        const messages = document.getElementById('chat-messages');
-        toggle.onclick = () => windowChat.style.display = windowChat.style.display === 'none' ? 'block' : 'none';
-        async function sendMessage() {
-            const msg = input.value.trim();
-            if (!msg) return;
-            registrarConsulta();
-            messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#e9ecef;border-radius:10px;">👤 Tú: ${msg}</div>`;
-            input.value = '';
-            messages.scrollTop = messages.scrollHeight;
-            messages.innerHTML += `<div id="thinking" style="margin-bottom:6px;padding:5px;background:#d1e7dd;border-radius:10px;">🐉 Asistente: ...</div>`;
-            try {
-                const geminiApiKey = 'AIzaSyDqcacCcsel_4XLEUFd1ILbHHQdC-5l-Js';
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiApiKey}`, {
-                    method: 'POST', headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: `Eres el asistente virtual de "Espíritu del Dragón". Ofrecemos servicios de sanación ancestral: Aromaterapia ($390 MXN), Acupuntura ($550 MXN), Moxibustión ($680 MXN), Masaje Terapéutico ($550 MXN), y paquetes especiales desde $800 MXN. Responde siempre como un asesor amable y experto en medicina tradicional china. Pregunta del cliente: ${msg}` }] }]
-                    })
-                });
-                const data = await response.json();
-                const respuestaIA = data.candidates[0].content.parts[0].text;
-                document.getElementById('thinking')?.remove();
-                messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#d1e7dd;border-radius:10px;">🐉 Asistente: ${respuestaIA}</div>`;
-                messages.scrollTop = messages.scrollHeight;
-            } catch(e) {
-                document.getElementById('thinking')?.remove();
-                messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#ffe6e6;color:red;border-radius:10px;">🐉 Asistente: Escríbenos a WhatsApp 52 777 910 7055</div>`;
-                messages.scrollTop = messages.scrollHeight;
-            }
-        }
-        send.onclick = sendMessage;
-        input.onkeypress = (e) => { if (e.key === 'Enter') sendMessage(); };
     </script>
 </body>
 </html>
