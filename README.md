@@ -1,2 +1,115 @@
-# espiritu-dragon
-Tienda de sanación ancestral con IA
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Espíritu del Dragón - Sanación Ancestral con IA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfaf6; color: #2a2a2a; line-height: 1.6; }
+        header { background: #4a2c2c; color: #e6c8a0; padding: 2rem; text-align: center; border-bottom: 4px solid #b8860b; }
+        .container { max-width: 1200px; margin: auto; padding: 2rem; }
+        .estadisticas { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
+        .tarjeta-estadistica { background: white; border-radius: 20px; padding: 1rem; flex: 1; min-width: 120px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+        .numero { font-size: 2rem; font-weight: bold; color: #b8860b; }
+        .servicios, .paquetes { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+        .card { background: white; border-radius: 20px; padding: 1.5rem; flex: 1; min-width: 280px; max-width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 4px solid #b8860b; text-align: center; }
+        .precio { font-size: 2rem; color: #4a2c2c; font-weight: bold; margin: 1rem 0; background: #fdfaf6; display: inline-block; padding: 0.3rem 1rem; border-radius: 40px; }
+        .btn { display: inline-block; background: #b8860b; color: white; padding: 0.8rem 1rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1rem; width: 100%; text-align: center; cursor: pointer; border: none; }
+        footer { background: #2a2a2a; color: #e6c8a0; text-align: center; padding: 2rem; margin-top: 2rem; }
+        @media (max-width: 768px) { .servicios, .paquetes { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐉 ESPÍRITU DEL DRAGÓN</h1>
+        <p>Sanación ancestral con aromaterapia, acupuntura y moxibustión</p>
+    </header>
+    <div class="container">
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica"><h3>👁️ Visitas</h3><div class="numero" id="visitas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>💬 Consultas</h3><div class="numero" id="consultas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>💰 Cotizaciones</h3><div class="numero" id="cotizaciones">0</div></div>
+        </div>
+        
+        <h2>🌿 Nuestros Servicios</h2>
+        <div class="servicios">
+            <div class="card"><h3>Aromaterapia</h3><div class="precio">$390 MXN</div><ul><li>🌼 Aceites esenciales puros</li><li>🕯️ Consulta personalizada</li><li>✨ Equilibrio emocional</li></ul><button class="btn" onclick="registrarCotizacion('Aromaterapia')">📲 Contratar</button></div>
+            <div class="card"><h3>Acupuntura</h3><div class="precio">$550 MXN</div><ul><li>📍 Puntos energéticos</li><li>⚡ Alivio del dolor</li><li>🍃 Sin dolor</li></ul><button class="btn" onclick="registrarCotizacion('Acupuntura')">📲 Contratar</button></div>
+            <div class="card"><h3>Moxibustión</h3><div class="precio">$680 MXN</div><ul><li>🔥 Terapia de calor</li><li>🌿 Con hierbas medicinales</li><li>💪 Fortalece el Qi</li></ul><button class="btn" onclick="registrarCotizacion('Moxibustión')">📲 Contratar</button></div>
+            <div class="card"><h3>Masaje Terapéutico</h3><div class="precio">$550 MXN</div><ul><li>💆‍♂️ Descontracturante</li><li>🕊️ Relajante profundo</li><li>🔄 Mejora circulación</li></ul><button class="btn" onclick="registrarCotizacion('Masaje')">📲 Contratar</button></div>
+        </div>
+
+        <h2>🎁 Paquetes Especiales</h2>
+        <div class="paquetes">
+            <div class="card"><h3>Bienestar Básico</h3><div class="precio">$800 MXN</div><ul><li>✨ Aromaterapia + Masaje</li><li>🎯 Ideal para estrés</li><li>🕒 Duración: 90 min</li></ul><button class="btn" onclick="registrarCotizacion('Bienestar Básico')">📲 Contratar</button></div>
+            <div class="card"><h3>Equilibrio Energético</h3><div class="precio">$950 MXN</div><ul><li>⚡ Acupuntura + Moxibustión</li><li>🎯 Para fatiga crónica</li><li>🕒 Duración: 2 horas</li></ul><button class="btn" onclick="registrarCotizacion('Equilibrio Energético')">📲 Contratar</button></div>
+            <div class="card"><h3>Desintoxicación Profunda</h3><div class="precio">$1,200 MXN</div><ul><li>🔥 Terapia Kombinada</li><li>🎯 Dolor muscular intenso</li><li>🕒 Duración: 2.5 horas</li></ul><button class="btn" onclick="registrarCotizacion('Desintoxicación Profunda')">📲 Contratar</button></div>
+            <div class="card"><h3>Cuidado Integral</h3><div class="precio">$1,900 MXN</div><ul><li>🏆 4 servicios juntos</li><li>🎯 Sanación completa</li><li>🕒 Duración: 3 horas</li></ul><button class="btn" onclick="registrarCotizacion('Cuidado Integral')">📲 Contratar</button></div>
+        </div>
+    </div>
+    <footer>
+        <p>📧 contacto@espiritudragon.com | 📞 52 777 910 7055</p>
+        <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
+    </footer>
+
+    <div id="chat-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-family: sans-serif;">
+        <div id="chat-toggle" style="background: #b8860b; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 12px; text-align: center; flex-direction: column;">💬<br>Chat</div>
+        <div id="chat-window" style="display: none; position: absolute; bottom: 80px; right: 0; width: 320px; background: white; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); overflow: hidden;">
+            <div style="background: #4a2c2c; color: #e6c8a0; padding: 12px; text-align: center; font-weight: bold;">🐉 Asistente Dragón</div>
+            <div id="chat-messages" style="height: 350px; overflow-y: auto; padding: 12px; background: #f9f9f9; font-size: 14px; color: black;"></div>
+            <div style="padding: 12px; display: flex; gap: 8px; background: white;">
+                <input type="text" id="chat-input" placeholder="Ej: ¿Qué incluye la moxibustión?" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 30px;">
+                <button id="chat-send" style="background: #b8860b; color: white; border: none; padding: 8px 16px; border-radius: 30px;">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
+        let consultas = localStorage.getItem('consultas_dragon') ? parseInt(localStorage.getItem('consultas_dragon')) : 0;
+        let cotizaciones = localStorage.getItem('cotizaciones_dragon') ? parseInt(localStorage.getItem('cotizaciones_dragon')) : 0;
+        visitas++; localStorage.setItem('visitas_dragon', visitas);
+        document.getElementById('visitas').innerText = visitas;
+        document.getElementById('consultas').innerText = consultas;
+        document.getElementById('cotizaciones').innerText = cotizaciones;
+        function registrarConsulta() { consultas++; localStorage.setItem('consultas_dragon', consultas); document.getElementById('consultas').innerText = consultas; }
+        window.registrarCotizacion = function(pack) { cotizaciones++; localStorage.setItem('cotizaciones_dragon', cotizaciones); document.getElementById('cotizaciones').innerText = cotizaciones; window.open(`https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20${pack}`, '_blank'); };
+        const toggle = document.getElementById('chat-toggle');
+        const windowChat = document.getElementById('chat-window');
+        const input = document.getElementById('chat-input');
+        const send = document.getElementById('chat-send');
+        const messages = document.getElementById('chat-messages');
+        toggle.onclick = () => windowChat.style.display = windowChat.style.display === 'none' ? 'block' : 'none';
+        async function sendMessage() {
+            const msg = input.value.trim();
+            if (!msg) return;
+            registrarConsulta();
+            messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#e9ecef;border-radius:10px;">👤 Tú: ${msg}</div>`;
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+            messages.innerHTML += `<div id="thinking" style="margin-bottom:6px;padding:5px;background:#d1e7dd;border-radius:10px;">🐉 Asistente: ...</div>`;
+            try {
+                const geminiApiKey = 'AIzaSyDqcacCcsel_4XLEUFd1ILbHHQdC-5l-Js';
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiApiKey}`, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `Eres el asistente virtual de "Espíritu del Dragón". Ofrecemos servicios de sanación ancestral: Aromaterapia ($390 MXN), Acupuntura ($550 MXN), Moxibustión ($680 MXN), Masaje Terapéutico ($550 MXN), y paquetes especiales desde $800 MXN. Responde siempre como un asesor amable y experto en medicina tradicional china. Pregunta del cliente: ${msg}` }] }]
+                    })
+                });
+                const data = await response.json();
+                const respuestaIA = data.candidates[0].content.parts[0].text;
+                document.getElementById('thinking')?.remove();
+                messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#d1e7dd;border-radius:10px;">🐉 Asistente: ${respuestaIA}</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            } catch(e) {
+                document.getElementById('thinking')?.remove();
+                messages.innerHTML += `<div style="margin-bottom:6px;padding:5px;background:#ffe6e6;color:red;border-radius:10px;">🐉 Asistente: Escríbenos a WhatsApp 52 777 910 7055</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }
+        }
+        send.onclick = sendMessage;
+        input.onkeypress = (e) => { if (e.key === 'Enter') sendMessage(); };
+    </script>
+</body>
+</html>
