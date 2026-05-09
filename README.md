@@ -69,7 +69,6 @@
         document.getElementById('consultas').innerText = consultas;
         document.getElementById('cotizaciones').innerText = cotizaciones;
         
-        function registrarConsulta() { consultas++; localStorage.setItem('consultas_dragon', consultas); document.getElementById('consultas').innerText = consultas; }
         window.registrarCotizacion = function(pack) { cotizaciones++; localStorage.setItem('cotizaciones_dragon', cotizaciones); document.getElementById('cotizaciones').innerText = cotizaciones; window.open(`https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20${pack}`, '_blank'); };
     </script>
 </body>
