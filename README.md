@@ -22,38 +22,38 @@
 </head>
 <body>
     <header>
-        <h1>🐉 ESPÍRITU DEL DRAGÓN</h1>
+        <h1>ESPIRITU DEL DRAGON</h1>
         <p>Sanación ancestral con aromaterapia, acupuntura y moxibustión</p>
     </header>
     <div class="container">
         <div class="estadisticas">
-            <div class="tarjeta-estadistica"><h3>👁️ Visitas</h3><div class="numero" id="visitas">0</div></div>
-            <div class="tarjeta-estadistica"><h3>💬 Consultas</h3><div class="numero" id="consultas">0</div></div>
-            <div class="tarjeta-estadistica"><h3>💰 Cotizaciones</h3><div class="numero" id="cotizaciones">0</div></div>
+            <div class="tarjeta-estadistica"><h3>Visitas</h3><div class="numero" id="visitas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>Consultas</h3><div class="numero" id="consultas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>Cotizaciones</h3><div class="numero" id="cotizaciones">0</div></div>
         </div>
         
-        <h2>🌿 Nuestros Servicios</h2>
+        <h2>Nuestros Servicios</h2>
         <div class="servicios">
-            <div class="card"><h3>Aromaterapia</h3><div class="precio">$390 MXN</div><ul><li>🌼 Aceites esenciales puros</li><li>🕯️ Consulta personalizada</li><li>✨ Equilibrio emocional</li></ul><button class="btn" onclick="registrarCotizacion('Aromaterapia')">📲 Contratar</button></div>
-            <div class="card"><h3>Acupuntura</h3><div class="precio">$550 MXN</div><ul><li>📍 Puntos energéticos</li><li>⚡ Alivio del dolor</li><li>🍃 Sin dolor</li></ul><button class="btn" onclick="registrarCotizacion('Acupuntura')">📲 Contratar</button></div>
-            <div class="card"><h3>Moxibustión</h3><div class="precio">$680 MXN</div><ul><li>🔥 Terapia de calor</li><li>🌿 Con hierbas medicinales</li><li>💪 Fortalece el Qi</li></ul><button class="btn" onclick="registrarCotizacion('Moxibustión')">📲 Contratar</button></div>
-            <div class="card"><h3>Masaje Terapéutico</h3><div class="precio">$550 MXN</div><ul><li>💆‍♂️ Descontracturante</li><li>🕊️ Relajante profundo</li><li>🔄 Mejora circulación</li></ul><button class="btn" onclick="registrarCotizacion('Masaje')">📲 Contratar</button></div>
+            <div class="card"><h3>Aromaterapia</h3><div class="precio">$390 MXN</div><ul><li>Aceites esenciales puros</li><li>Consulta personalizada</li><li>Equilibrio emocional</li></ul><button class="btn" onclick="registrarCotizacion('Aromaterapia')">Contratar</button></div>
+            <div class="card"><h3>Acupuntura</h3><div class="precio">$550 MXN</div><ul><li>Puntos energéticos</li><li>Alivio del dolor</li><li>Sin dolor</li></ul><button class="btn" onclick="registrarCotizacion('Acupuntura')">Contratar</button></div>
+            <div class="card"><h3>Moxibustión</h3><div class="precio">$680 MXN</div><ul><li>Terapia de calor</li><li>Con hierbas medicinales</li><li>Fortalece el Qi</li></ul><button class="btn" onclick="registrarCotizacion('Moxibustión')">Contratar</button></div>
+            <div class="card"><h3>Masaje Terapéutico</h3><div class="precio">$550 MXN</div><ul><li>Descontracturante</li><li>Relajante profundo</li><li>Mejora circulación</li></ul><button class="btn" onclick="registrarCotizacion('Masaje')">Contratar</button></div>
         </div>
 
-        <h2>🎁 Paquetes Especiales</h2>
+        <h2>Paquetes Especiales</h2>
         <div class="paquetes">
-            <div class="card"><h3>Bienestar Básico</h3><div class="precio">$800 MXN</div><ul><li>✨ Aromaterapia + Masaje</li><li>🎯 Ideal para estrés</li><li>🕒 Duración: 90 min</li></ul><button class="btn" onclick="registrarCotizacion('Bienestar Básico')">📲 Contratar</button></div>
-            <div class="card"><h3>Equilibrio Energético</h3><div class="precio">$950 MXN</div><ul><li>⚡ Acupuntura + Moxibustión</li><li>🎯 Para fatiga crónica</li><li>🕒 Duración: 2 horas</li></ul><button class="btn" onclick="registrarCotizacion('Equilibrio Energético')">📲 Contratar</button></div>
-            <div class="card"><h3>Desintoxicación Profunda</h3><div class="precio">$1,200 MXN</div><ul><li>🔥 Terapia Kombinada</li><li>🎯 Dolor muscular intenso</li><li>🕒 Duración: 2.5 horas</li></ul><button class="btn" onclick="registrarCotizacion('Desintoxicación Profunda')">📲 Contratar</button></div>
-            <div class="card"><h3>Cuidado Integral</h3><div class="precio">$1,900 MXN</div><ul><li>🏆 4 servicios juntos</li><li>🎯 Sanación completa</li><li>🕒 Duración: 3 horas</li></ul><button class="btn" onclick="registrarCotizacion('Cuidado Integral')">📲 Contratar</button></div>
+            <div class="card"><h3>Bienestar Básico</h3><div class="precio">$800 MXN</div><ul><li>Aromaterapia + Masaje</li><li>Ideal para estrés</li><li>Duracion: 90 min</li></ul><button class="btn" onclick="registrarCotizacion('Bienestar Básico')">Contratar</button></div>
+            <div class="card"><h3>Equilibrio Energético</h3><div class="precio">$950 MXN</div><ul><li>Acupuntura + Moxibustión</li><li>Para fatiga crónica</li><li>Duracion: 2 horas</li></ul><button class="btn" onclick="registrarCotizacion('Equilibrio Energético')">Contratar</button></div>
+            <div class="card"><h3>Desintoxicación Profunda</h3><div class="precio">$1,200 MXN</div><ul><li>Terapia Kombinada</li><li>Dolor muscular intenso</li><li>Duracion: 2.5 horas</li></ul><button class="btn" onclick="registrarCotizacion('Desintoxicación Profunda')">Contratar</button></div>
+            <div class="card"><h3>Cuidado Integral</h3><div class="precio">$1,900 MXN</div><ul><li>4 servicios juntos</li><li>Sanación completa</li><li>Duracion: 3 horas</li></ul><button class="btn" onclick="registrarCotizacion('Cuidado Integral')">Contratar</button></div>
         </div>
     </div>
     <footer>
-        <p>📧 contacto@espiritudragon.com | 📞 52 777 910 7055</p>
-        <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
+        <p>contacto@espiritudragon.com | 52 777 910 7055</p>
+        <p>2026 Espíritu del Dragon - Sanación ancestral</p>
     </footer>
 
-    <!-- Tidio Chat (Lyro AI) - Funciona 100% -->
+    <!-- Tidio Chat -->
     <script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
 
     <script>
@@ -65,7 +65,7 @@
         document.getElementById('consultas').innerText = consultas;
         document.getElementById('cotizaciones').innerText = cotizaciones;
         
-        window.registrarCotizacion = function(pack) { cotizaciones++; localStorage.setItem('cotizaciones_dragon', cotizaciones); document.getElementById('cotizaciones').innerText = cotizaciones; window.open(`https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20${pack}`, '_blank'); };
+        window.registrarCotizacion = function(pack) { cotizaciones++; localStorage.setItem('cotizaciones_dragon', cotizaciones); document.getElementById('cotizaciones').innerText = cotizaciones; window.open('https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20' + pack, '_blank'); };
     </script>
 </body>
 </html>
