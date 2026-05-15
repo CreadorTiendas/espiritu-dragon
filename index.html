@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Espíritu del Dragón - Sanación Ancestral</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fdfaf6; color: #2a2a2a; line-height: 1.6; }
+        
+        /* NUEVA PORTADA ESTILO DRAGÓN */
+        .hero {
+            background: linear-gradient(135deg, #4a2c2c 0%, #6b3a3a 100%);
+            color: #e6c8a0;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid #b8860b;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-hero {
+            display: inline-block;
+            background: #b8860b;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn-hero:hover { transform: scale(1.05); }
+        .btn-hero-outline {
+            background: transparent;
+            border: 2px solid #b8860b;
+            color: #e6c8a0;
+        }
+        
+        .container { max-width: 1200px; margin: auto; padding: 2rem; }
+        .estadisticas { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
+        .tarjeta-estadistica { background: white; border-radius: 20px; padding: 1rem; flex: 1; min-width: 120px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+        .numero { font-size: 2rem; font-weight: bold; color: #b8860b; }
+        .servicios, .paquetes { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+        .card { background: white; border-radius: 20px; padding: 1.5rem; flex: 1; min-width: 280px; max-width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 4px solid #b8860b; text-align: center; }
+        .precio { font-size: 2rem; color: #4a2c2c; font-weight: bold; margin: 1rem 0; background: #fdfaf6; display: inline-block; padding: 0.3rem 1rem; border-radius: 40px; }
+        .btn { display: inline-block; background: #b8860b; color: white; padding: 0.8rem 1rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1rem; width: 100%; text-align: center; cursor: pointer; border: none; }
+        footer { background: #2a2a2a; color: #e6c8a0; text-align: center; padding: 2rem; margin-top: 2rem; }
+        .datos-seguridad { background: #4a2c2c; color: #e6c8a0; padding: 1.5rem; margin: 2rem auto; border-radius: 20px; max-width: 800px; text-align: center; }
+        .boton-copiar { background: #b8860b; color: white; border: none; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; margin-top: 0.5rem; }
+        @media (max-width: 768px) { .servicios, .paquetes { flex-direction: column; align-items: center; } .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <!-- NUEVA PORTADA -->
+    <div class="hero">
+        <h1>Espíritu del Dragón</h1>
+        <h2 style="color: #e6c8a0; margin-bottom: 1rem; font-size: 1.5rem;">SANACIÓN ANCESTRAL</h2>
+        <p>✨ Despierta el dragón que vive en ti ✨</p>
+        <p style="font-size: 1rem; max-width: 600px; margin: 0 auto 2rem auto;">Terapias orientales para restaurar el flujo de tu energía vital. Cuerpo, mente y espíritu en perfecto equilibrio.</p>
+        <div class="hero-buttons">
+            <a href="#servicios" class="btn-hero">📿 Reserva tu sesión</a>
+            <a href="#servicios" class="btn-hero btn-hero-outline">🐉 Ver servicios</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="estadisticas">
+            <div class="tarjeta-estadistica"><h3>Visitas</h3><div class="numero" id="visitas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>Consultas</h3><div class="numero" id="consultas">0</div></div>
+            <div class="tarjeta-estadistica"><h3>Cotizaciones</h3><div class="numero" id="cotizaciones">0</div></div>
+        </div>
+
+        <h2 id="servicios">🌿 Nuestros Servicios</h2>
+        <div class="servicios">
+            <div class="card"><h3>Aromaterapia</h3><div class="precio">$390 MXN</div><ul><li>Aceites esenciales puros</li><li>Consulta personalizada</li><li>Equilibrio emocional</li></ul><button class="btn" onclick="registrarCotizacion('Aromaterapia')">📲 Contratar</button></div>
+            <div class="card"><h3>Acupuntura</h3><div class="precio">$550 MXN</div><ul><li>Puntos energéticos</li><li>Alivio del dolor</li><li>Sin dolor</li></ul><button class="btn" onclick="registrarCotizacion('Acupuntura')">📲 Contratar</button></div>
+            <div class="card"><h3>Moxibustión</h3><div class="precio">$680 MXN</div><ul><li>Terapia de calor</li><li>Con hierbas medicinales</li><li>Fortalece el Qi</li></ul><button class="btn" onclick="registrarCotizacion('Moxibustión')">📲 Contratar</button></div>
+            <div class="card"><h3>Masaje Terapéutico</h3><div class="precio">$550 MXN</div><ul><li>Descontracturante</li><li>Relajante profundo</li><li>Mejora circulación</li></ul><button class="btn" onclick="registrarCotizacion('Masaje')">📲 Contratar</button></div>
+        </div>
+
+        <h2>🎁 Paquetes Especiales</h2>
+        <div class="paquetes">
+            <div class="card"><h3>Bienestar Básico</h3><div class="precio">$800 MXN</div><ul><li>Aromaterapia + Masaje</li><li>Ideal para estrés</li><li>Duración: 90 min</li></ul><button class="btn" onclick="registrarCotizacion('Bienestar Básico')">📲 Contratar</button></div>
+            <div class="card"><h3>Equilibrio Energético</h3><div class="precio">$950 MXN</div><ul><li>Acupuntura + Moxibustión</li><li>Para fatiga crónica</li><li>Duración: 2 horas</li></ul><button class="btn" onclick="registrarCotizacion('Equilibrio Energético')">📲 Contratar</button></div>
+            <div class="card"><h3>Desintoxicación Profunda</h3><div class="precio">$1,200 MXN</div><ul><li>Terapia Kombinada</li><li>Dolor muscular intenso</li><li>Duración: 2.5 horas</li></ul><button class="btn" onclick="registrarCotizacion('Desintoxicación Profunda')">📲 Contratar</button></div>
+            <div class="card"><h3>Cuidado Integral</h3><div class="precio">$1,900 MXN</div><ul><li>4 servicios juntos</li><li>Sanación completa</li><li>Duración: 3 horas</li></ul><button class="btn" onclick="registrarCotizacion('Cuidado Integral')">📲 Contratar</button></div>
+        </div>
+
+        <div class="datos-seguridad">
+            <h3>🔒 Pago seguro por transferencia</h3>
+            <p>Para apartar tu cita, realiza una transferencia a esta CLABE (solo sirve para depositar):</p>
+            <p><strong>CLABE: 1275 4002 1038 8372</strong></p>
+            <button class="boton-copiar" onclick="copiarCLABE()">📋 Copiar CLABE</button>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">✅ Una vez transferido, envíanos tu comprobante por WhatsApp.<br>🔐 Tus datos están seguros. Nunca te pediremos tu número de tarjeta.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>📍 Camino Antiguo a Chamilpa #50, Col. Tlatepexco, Cuernavaca, Morelos. CP 62233</p>
+        <p>📧 contacto@espiritudragon.com | 📞 WhatsApp: 52 777 910 7055 | 📞 Llamadas: 52 220 133 9274</p>
+        <p>🕘 Horarios: Lun-Sáb 10am-7pm | Dom con cita previa</p>
+        <p>© 2026 Espíritu del Dragón - Sanación ancestral</p>
+    </footer>
+
+    <script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
+
+    <script>
+        let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
+        let consultas = localStorage.getItem('consultas_dragon') ? parseInt(localStorage.getItem('consultas_dragon')) : 0;
+        let cotizaciones = localStorage.getItem('cotizaciones_dragon') ? parseInt(localStorage.getItem('cotizaciones_dragon')) : 0;
+        visitas++; localStorage.setItem('visitas_dragon', visitas);
+        document.getElementById('visitas').innerText = visitas;
+        document.getElementById('consultas').innerText = consultas;
+        document.getElementById('cotizaciones').innerText = cotizaciones;
+
+        window.registrarCotizacion = function(pack) { 
+            cotizaciones++; 
+            localStorage.setItem('cotizaciones_dragon', cotizaciones); 
+            document.getElementById('cotizaciones').innerText = cotizaciones; 
+            window.open('https://wa.me/527779107055?text=Me%20interesa%20el%20paquete%20de%20' + encodeURIComponent(pack), '_blank'); 
+        };
+
+        function copiarCLABE() {
+            const clabe = "1275 4002 1038 8372";
+            navigator.clipboard.writeText(clabe).then(() => {
+                alert("✅ CLABE " + clabe + " copiada. Realiza tu transferencia y envíanos el comprobante por WhatsApp.");
+            }).catch(() => {
+                alert("❌ No se pudo copiar. Copia manualmente: " + clabe);
+            });
+        }
+    </script>
+</body>
+</html>
