@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Espíritu del Dragón - Sanación Ancestral</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Segoe UI', serif;
+            background: #fef7e8;
+            color: #2c1810;
+            line-height: 1.5;
+        }
+
+        /* === PORTADA PRINCIPAL === */
+        .portada {
+            background: linear-gradient(145deg, #1f0f0a 0%, #3b1f14 100%);
+            color: #f5e6c4;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 5px solid #d4a017;
+        }
+        .portada h1 {
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .portada h2 {
+            font-size: 1rem;
+            color: #d4a017;
+            letter-spacing: 6px;
+            margin-bottom: 1rem;
+        }
+        .portada p {
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 1.5rem auto;
+            font-style: italic;
+        }
+        .botones {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-oro {
+            background: #d4a017;
+            color: #1f0f0a;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #d4a017;
+            color: #f5e6c4;
+        }
+
+        /* === VALORES === */
+        .valores {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem 1rem;
+            background: #fff5e8;
+            text-align: center;
+        }
+        .valor-card {
+            flex: 1;
+            min-width: 180px;
+            padding: 1rem;
+        }
+        .valor-card h3 { color: #d4a017; margin-bottom: 0.5rem; }
+
+        /* === SERVICIOS Y PAQUETES === */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+        .servicios, .paquetes {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #d4a017;
+            text-align: center;
+        }
+        .precio {
+            font-size: 1.6rem;
+            color: #b8860b;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .btn-card {
+            background: #d4a017;
+            color: #1f0f0a;
+            padding: 0.6rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .tiempo { font-size: 0.85rem; color: #666; margin: 0.5rem 0; }
+
+        /* === CONTACTO === */
+        .cta {
+            background: #3b1f14;
+            color: #f5e6c4;
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .footer {
+            background: #1f0f0a;
+            color: #e6c8a0;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #d4a017; text-decoration: none; }
+        @media (max-width: 768px) {
+            .servicios, .paquetes { flex-direction: column; align-items: center; }
+            .portada h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<div class="portada">
+    <h1>Espíritu del Dragón</h1>
+    <h2>SANACIÓN ANCESTRAL</h2>
+    <p>✨ Despierta el dragón que vive en ti ✨<br>Terapias orientales para restaurar el flujo de tu energía vital. Cuerpo, mente y espíritu en perfecto equilibrio.</p>
+    <div class="botones">
+        <a href="#servicios" class="btn-oro">📿 Reserva tu sesión</a>
+        <a href="#servicios" class="btn-oro btn-outline">🐉 Ver servicios</a>
+    </div>
+</div>
+
+<!-- VALORES -->
+<div class="valores">
+    <div class="valor-card"><h3>🌿 Esencias puras</h3><p>Aceites y herbales seleccionados de origen orgánico.</p></div>
+    <div class="valor-card"><h3>🌸 Atención dedicada</h3><p>Cada sesión se diseña para tu energía única.</p></div>
+    <div class="valor-card"><h3>🔥 Tradición milenaria</h3><p>Técnicas con miles de años de sabiduría.</p></div>
+</div>
+
+<!-- SERVICIOS -->
+<div class="container" id="servicios">
+    <h2 style="text-align:center; margin-bottom:1rem;">🌿 SERVICIOS</h2>
+    <p style="text-align:center; margin-bottom:2rem;">Sanación a tu medida</p>
+    <div class="servicios">
+        <div class="card"><h3>Aromaterapia</h3><div class="tiempo">60 MIN</div><p>Aceites esenciales puros que armonizan emociones.</p><div class="precio">$390 MXN</div><a href="https://wa.me/527779107055?text=Me%20interesa%20Aromaterapia" class="btn-card">Reservar sesión →</a></div>
+        <div class="card"><h3>Acupuntura</h3><div class="tiempo">75 MIN</div><p>Reactiva el flujo del Qi mediante puntos meridianos.</p><div class="precio">$550 MXN</div><a href="https://wa.me/527779107055?text=Me%20interesa%20Acupuntura" class="btn-card">Reservar sesión →</a></div>
+        <div class="card"><h3>Moxibustión</h3><div class="tiempo">60 MIN</div><p>Calor terapéutico de artemisa que fortalece la energía vital.</p><div class="precio">$680 MXN</div><a href="https://wa.me/527779107055?text=Me%20interesa%20Moxibustión" class="btn-card">Reservar sesión →</a></div>
+        <div class="card"><h3>Masaje Terapéutico</h3><div class="tiempo">60 MIN</div><p>Libera tensiones y restaura la armonía corporal.</p><div class="precio">$550 MXN</div><a href="https://wa.me/527779107055?text=Me%20interesa%20Masaje" class="btn-card">Reservar sesión →</a></div>
+    </div>
+
+    <h2 style="text-align:center; margin:2rem 0 1rem;">🎁 PAQUETES ESPECIALES</h2>
+    <div class="paquetes">
+        <div class="card"><h3>Bienestar Básico</h3><div class="precio">$800 MXN</div><p>Aromaterapia + Masaje<br>90 min de paz</p><a href="https://wa.me/527779107055?text=Me%20interesa%20Bienestar%20Básico" class="btn-card">Reservar →</a></div>
+        <div class="card"><h3>Equilibrio Energético</h3><div class="precio">$950 MXN</div><p>Acupuntura + Moxibustión<br>2 horas de armonía</p><a href="https://wa.me/527779107055?text=Me%20interesa%20Equilibrio%20Energético" class="btn-card">Reservar →</a></div>
+        <div class="card"><h3>Desintoxicación Profunda</h3><div class="precio">$1,200 MXN</div><p>Terapia Kombinada<br>2.5 horas de renovación</p><a href="https://wa.me/527779107055?text=Me%20interesa%20Desintoxicación" class="btn-card">Reservar →</a></div>
+        <div class="card"><h3>Cuidado Integral</h3><div class="precio">$1,900 MXN</div><p>4 servicios juntos<br>3 horas de sanación total</p><a href="https://wa.me/527779107055?text=Me%20interesa%20Cuidado%20Integral" class="btn-card">Reservar →</a></div>
+    </div>
+</div>
+
+<!-- CLABE -->
+<div class="cta">
+    <h3>🔒 Pago seguro por transferencia</h3>
+    <p>CLABE: <strong>1275 4002 1038 8372</strong></p>
+    <p>Una vez transferido, envía comprobante por WhatsApp.</p>
+    <a href="https://wa.me/527779107055" class="btn-oro" style="background:#d4a017; color:#1f0f0a;">📲 Enviar comprobante</a>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<div class="footer">
+    <p>📍 Camino Antiguo a Chamilpa #50, Col. Tlatepexco, Cuernavaca, Morelos. CP 62233</p>
+    <p>📧 contacto@espiritudragon.com | 📞 WhatsApp: 52 777 910 7055</p>
+    <p>🕘 Horarios: Lun-Sáb 10am-7pm | Dom con cita previa</p>
+    <p>© 2026 Espíritu del Dragón — Tu refugio ancestral</p>
+    <p><a href="https://creati-ia-magic.lovable.app">CreadorTiendas</a> — Creando negocios digitales</p>
+</div>
+
+<!-- Tidio Chat -->
+<script src="//code.tidio.co/turocovxhshqbvu6tzomxcxuaoiejo4m.js" async></script>
+
+<script>
+    // Contadores simples
+    let visitas = localStorage.getItem('visitas_dragon') ? parseInt(localStorage.getItem('visitas_dragon')) : 0;
+    visitas++;
+    localStorage.setItem('visitas_dragon', visitas);
+    console.log("Visitas: " + visitas);
+</script>
+</body>
+</html>
